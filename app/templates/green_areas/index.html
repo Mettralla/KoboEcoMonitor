@@ -1,0 +1,62 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Listado Zonas Verdes{% endblock title %}
+
+{% block content %}
+
+<div class="row p-2 mt-5 mx-3 align-items-center" style="background-color: #DEDEDE; border-radius: 10px">
+    <div class="col text-start">
+        <h3>Zonas Verdes</h3>
+    </div>
+    <div class="col text-end">
+        <!-- <a class="btn btn-light p-1 px-3 me-2" href="#">Volver</a> -->
+        <a class="btn btn-dark p-1 px-3 me-2" href="#">Nuevo</a>
+    </div>
+</div>
+
+<div class="mx-3">
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Calle</th>
+                <th scope="col">Ordenanza</th>
+                <th scope="col">Juegos</th>
+                <th scope="col">Bancos</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for item in items %}
+            <tr>
+                <th scope="row">{{ item.id }}</th>
+                <td>{{ item.nombre }}</td>
+                <td>{{ item.tipo }}</td>
+                <td>{{ item.calle }}</td>
+                <td>{{ item.ordenanza }}</td>
+                <td>
+                    {% if item.tiene_juegos == "si" %}
+                        <i
+                            class="bi bi-check-circle-fill link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-3"></i>
+                    {% else %}
+                        <i
+                            class="bi bi-x-circle-fill link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-3"></i>
+                    {% endif %}
+                </td>
+                <td>
+                    {% if item.tiene_bancos == "si" %}
+                        <i
+                            class="bi bi-check-circle-fill link-success link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-3"></i>
+                    {% else %}
+                        <i
+                            class="bi bi-x-circle-fill link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-3"></i>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}

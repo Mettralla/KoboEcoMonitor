@@ -4,7 +4,7 @@ class Config:
     SERVER_NAME = "127.0.0.1:5000"
     DEBUG = True
     TEMPLATE_FOLDER = "app/templates/"
-    STATIC_FOLDER = "app/static/"
+    STATIC_FOLDER = "./app/static"
     AUTH_TOKEN = config("API_KEY")
     FORM_ID = config("FORM_ID")
     PROJECT_UID = config("FORM_ID_STRING")
