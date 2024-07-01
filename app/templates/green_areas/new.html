@@ -1,0 +1,96 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Agregar Zonas Verdes{% endblock title %}
+
+{% block content %}
+
+<div class="row vh-100">
+
+    <div class="col-lg-3" style="background-color: #eae7e7;"></div>
+
+    <div class="col-lg-6 shadow-lg p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="margin-top: 3vh">
+                        <div class="card-header text-white" style="background-color: #0c59aa;">
+                            <div class="row d-flex align-items-center ">
+
+                                <div class="col-6">
+                                    <h5 class="mb-0">Nueva Zona Verde</h5>
+                                </div>
+
+                                <div class="col-6 text-end">
+                                    <a class="btn btn-light p-2 px-3" href="{{ url_for("green_area_bp.get_green_zones") }}">Volver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                            <form method="post" action="{{ url_for("green_area_bp.create_green_zones") }}">
+
+                                <div class="form-group">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required="">
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="calle">Calle:</label>
+                                    <input type="text" class="form-control" id="calle" name="calle"
+                                        required="">
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="ordenanza">Ordenanza:</label>
+                                    <input type="text" class="form-control" id="ordenanza" name="ordenanza" required="">
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="tipo">Tipo:</label>
+                                    <select class="form-control" id="tipo" name="tipo" required="">
+                                        <option value="espacios_verdes">Espacios Verdes</option>
+                                        <option value="plaza_barrial">Plaza Barrial</option>
+                                        <option value="plazabanda">Plazabanda</option>
+                                        <option value="plaza_urbana">Plaza Urbana</option>
+                                        <option value="plazoleta">Plazoleta</option>
+                                    </select>
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="juegos">¿Tiene juegos infantiles?</label>
+                                    <select class="form-control" id="juegos" name="juegos" required="">
+                                        <option value="si">Si</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="bancos">¿Tiene bancos?</label>
+                                    <select class="form-control" id="bancos" name="bancos" required="">
+                                        <option value="si">Si</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+                                <br>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-dark text-center">Guardar</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3" style="background-color: #eae7e7;"></div>
+</div>
+
+{% endblock content %}
