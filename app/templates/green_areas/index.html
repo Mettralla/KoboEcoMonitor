@@ -25,6 +25,7 @@
                 <th scope="col">Ordenanza</th>
                 <th scope="col">Juegos</th>
                 <th scope="col">Bancos</th>
+                <th scope="col">Editar</th>
             </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -52,6 +53,14 @@
                         <i
                             class="bi bi-x-circle-fill link-danger link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-3"></i>
                     {% endif %}
+                </td>
+
+                </td>
+                <td>
+                    <a href="{{ url_for("green_area_bp.edit_green_zones", id=item.id) }}">
+                        <i
+                            class="bi bi-pencil-square link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-2"></i>
+                    </a>
                 </td>
             </tr>
             {% endfor %}
