@@ -109,3 +109,14 @@ class GreenAreasController():
                 return redirect(url_for('green_area_bp.get_green_zones'))
         else:
             return jsonify({'error': 'Failed to submit data.'}), response.status_code
+    
+    @classmethod
+    def delete_green_areas(cls, id):
+        # TODO No elimina el registro "Method Not Allowed"
+        response = requests.delete(
+            f"https://kc.kobotoolbox.org/api/v1/data/{Config.FORM_ID}/{id}", headers=Config.HEADER)
+
+        if response.status_code == 204:
+            return redirect(url_for('green_area_bp.get_green_zones'))
+        else:
+            return jsonify({'error': 'Failed to submit data.'}), response.status_code
