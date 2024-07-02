@@ -1,0 +1,96 @@
+{% extends 'layouts/base.html' %}
+
+{% block title %}Editar Zonas Verdes{% endblock title %}
+
+{% block content %}
+
+<div class="row vh-100">
+
+    <div class="col-lg-3" style="background-color: #eae7e7;"></div>
+
+    <div class="col-lg-6 shadow-lg p-3">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="margin-top: 3vh">
+                        <div class="card-header text-white" style="background-color: #0c59aa;">
+                            <div class="row d-flex align-items-center ">
+
+                                <div class="col-6">
+                                    <h5 class="mb-0">Editar Zona Verde</h5>
+                                </div>
+
+                                <div class="col-6 text-end">
+                                    <a class="btn btn-light p-2 px-3" href="{{ url_for("green_area_bp.get_green_zones") }}">Volver</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+
+                            <form method="post" action="{{ url_for("green_area_bp.update_green_zones", id=items.id) }}">
+
+                                <div class="form-group">
+                                    <label for="nombre">Nombre:</label>
+                                    <input type="text" class="form-control" value="{{items.nombre}}" id="nombre" name="nombre" required="">
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="calle">Calle:</label>
+                                    <input type="text" class="form-control" value="{{items.calle}}" id="calle" name="calle"
+                                        required="">
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="ordenanza">Ordenanza:</label>
+                                    <input type="text" class="form-control" value="{{items.ordenanza}}" id="ordenanza" name="ordenanza" required="">
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="tipo">Tipo:</label>
+                                    <select autocomplete="off" class="form-control" id="tipo" name="tipo" required="">
+                                        <option value="espacios_verdes" {% if items.tipo=='espacios_verdes' %}selected{% endif %}>Espacios Verdes</option>
+                                        <option value="plaza_barrial" {% if items.tipo=='plaza_barrial' %}selected{% endif %}>Plaza Barrial</option>
+                                        <option value="plazabanda" {% if items.tipo=='plazabanda' %}selected{% endif %}>Plazabanda</option>
+                                        <option value="plaza_urbana" {% if items.tipo=='plaza_urbana' %}selected{% endif %}>Plaza Urbana</option>
+                                        <option value="plazoleta" {% if items.tipo=='plazoleta' %}selected{% endif %}>Plazoleta</option>
+                                    </select>
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="juegos">¿Tiene juegos infantiles?</label>
+                                    <select class="form-control" id="juegos" name="juegos" required="">
+                                        <option value="si" {% if items.tiene_juegos=='si' %}selected{% endif %}>Si</option>
+                                        <option value="no" {% if items.tiene_juegos=='no' %}selected{% endif %}>No</option>
+                                    </select>
+                                </div>
+                                <br>
+
+                                <div class="form-group">
+                                    <label for="bancos">¿Tiene bancos?</label>
+                                    <select class="form-control" id="bancos" name="bancos" required="">
+                                        <option value="si" {% if items.tiene_bancos=='si' %}selected{% endif %}>Si</option>
+                                        <option value="no" {% if items.tiene_bancos=='no' %}selected{% endif %}>No</option>
+                                    </select>
+                                </div>
+                                <br>
+
+                                <div class="text-center">
+                                    <button type="submit" class="btn btn-dark text-center">Editar</button>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-3" style="background-color: #eae7e7;"></div>
+</div>
+
+{% endblock content %}
