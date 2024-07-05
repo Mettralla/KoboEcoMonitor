@@ -25,8 +25,7 @@
                 <th scope="col">Ordenanza</th>
                 <th scope="col">Juegos</th>
                 <th scope="col">Bancos</th>
-                <th scope="col">Editar</th>
-                <!-- <th scope="col">Borrar</th> -->
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody class="table-group-divider">
@@ -62,14 +61,11 @@
                         <i
                             class="bi bi-pencil-square link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-2"></i>
                     </a>
-                </td>
 
-                <!-- <td>
                     <a href="{{ url_for("green_area_bp.delete_green_zones", id=item.id) }}">
-                        <i
-                            class="bi bi-trash3 link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-2"></i>
+                        <i class="bi bi-trash3 link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ms-2"></i>
                     </a>
-                </td> -->
+                </td>
             </tr>
             {% endfor %}
         </tbody>

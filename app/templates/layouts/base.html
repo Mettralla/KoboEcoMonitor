@@ -12,6 +12,8 @@
 
     <script src="https://kit.fontawesome.com/3e81cc3298.js" crossorigin="anonymous"></script>
 
+    <link rel="icon" href="../../static/favicon.png" sizes="32x32">
+
     <title>{% block title %}{% endblock title %}</title>
 </head>
 <body>
@@ -20,14 +22,13 @@
         <div class="row">
             <nav class="navbar d-flex flex-row-reverse" style="background-color: #0c59aa; height:70px;">
                 <div class="d-flex align-items-center">
-                    <!-- <a class="nav-link text-white p-2 me-2" href="#">Libros</a>
-                    <a class="nav-link text-white p-2 me-2" href="#">Autores</a>
-                    <a class="nav-link text-white p-2 me-2" href="#">Socios</a>
-                    <a class="nav-link text-white p-2 me-2" href="#">Empleados</a>
-                    <a class="nav-link text-white p-2 me-2" href="#">Prestamos</a> -->
-                    <!-- <a class="btn btn-light p-2 px-4 me-2" href="#">Login</a> -->
+                    <!-- NAV ITEMS - EN CASO DE SER NECESARIO -->
+                    <!-- <a class="nav-link text-white p-2 me-2" href="#">Zonas Verdes</a>
+                    <a class="nav-link text-white p-2 me-2" href="#">Usuarios</a>
+                    <a class="btn btn-light p-2 px-4 me-2" href="#">Login</a> -->
+                    <!-- NAV ITEMS - EN CASO DE SER NECESARIO -->
                 </div>
-                <a class="navbar-brand text-white p-2 ms-4" href="#">
+                <a class="navbar-brand text-white p-2 ms-4" href="{{ url_for("green_area_bp.get_green_zones") }}">
                     <img src="../../static/muniISO.svg"v width="40" height="40" alt="Mi Biblioteca SVG" class="me-2"> 
                 </a>
             </nav> 
@@ -36,51 +37,5 @@
     {% block content %}
     {% endblock content %}
 
-
-    <!-- <div class="container-fluid">
-        <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-4 mt-5 border-top">
-        <div class="col mb-3">
-            <a href="#" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                <i class="fa-brands fa-bootstrap fa-xl" style="margin-right: 1vh; color:#282d37"></i> 
-                <img src="fa-brands fa-bootstrap fa-xl" alt="Tu SVG" style="width: 24px; height: 24px; margin-right: 1vh">
-                <i class="fa-brands fa-bootstrap fa-xl" style="margin-right: 1vh; color:#282d37"></i>
-                <i class="fa-brands fa-git-alt fa-xl" style="margin-right: 1vh; color:#282d37"></i>
-                <img src="fa-brands fa-bootstrap fa-xl" alt="Tu SVG" style="width: 24px; height: 24px; margin-right: 1vh">
-
-
-            </a>
-            
-            <p class="text-muted text-white">© 2023</p>
-        </div>
-
-        <div class="col mb-3"></div>
-
-        <div class="col mb-3"></div>
-
-        <div class="col mb-3">
-            <h5>Docs</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="https://github.com/Mettralla/WebApp/blob/develop/README.md" class="nav-link p-0 text-muted">Readme</a></li>
-            </ul>
-        </div>
-
-        <div class="col mb-3">
-            <h5>Redes</h5>
-            <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/frescoh/" class="nav-link p-0 text-muted">
-                    <i class="fa-brands fa-linkedin"></i> Hernan Fresco</a>
-                </li>
-                <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/pilar-toledo-19633642/" class="nav-link p-0 text-muted">
-                    <i class="fa-brands fa-linkedin"></i> Pilar Toledo</a>
-                </li>
-                <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/rodrigo-gonza/" class="nav-link p-0 text-muted">
-                    <i class="fa-brands fa-linkedin"></i> Rodrigo Gonza</a>
-                </li>
-                <li class="nav-item mb-2"><a href="https://www.linkedin.com/in/daniel-alejandro-tejerina/" class="nav-link p-0 text-muted">
-                    <i class="fa-brands fa-linkedin"></i> Daniel Tejerina</a>
-                </li>
-            </ul>
-        </div>
-    </footer> -->
 </body>
 </html>

@@ -8,4 +8,4 @@ green_areas.route("/new", methods=["GET"], endpoint="new_green_zones")(GreenArea
 green_areas.route("/create", methods=["POST"], endpoint="create_green_zones")(GreenAreasController.create_green_areas)
 green_areas.route("/edit/<int:id>", methods=["GET"], endpoint="edit_green_zones")(GreenAreasController.edit_green_areas)
 green_areas.route("/update/<string:id>", methods=["POST"], endpoint="update_green_zones")(GreenAreasController.update_green_areas)
-green_areas.route("/delete/<string:id>", methods=["DELETE"], endpoint="delete_green_zones")(GreenAreasController.delete_green_areas)
+green_areas.route("/delete/<string:id>", methods=['GET', 'DELETE'], endpoint="delete_green_zones")(GreenAreasController.delete_green_areas)
