@@ -48,7 +48,7 @@
 Clonar el repositorio backend
 
 ```bash
-git clone clone https://github.com/Mettralla/KoboEcoMonitor.git
+git clone https://github.com/Mettralla/KoboEcoMonitor.git
 ```
 
 Ir al directorio del proyecto
