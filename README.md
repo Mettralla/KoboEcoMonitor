@@ -26,14 +26,15 @@
     │   │   ├── __init__.py
     │   │   ├── muniISO.svg
     │   │   └── favicon.png
-    │   └── templates/
-    │       ├── green_areas/
-    │       │   ├── edit.html
-    │       │   ├── index.html
-    │       │   └── new.html
-    │       ├── layout/
-    │       │   └── base.html
-    │       └── __init__.py
+    │   ├── templates/
+    │   │   ├── green_areas/
+    │   │   │   ├── edit.html
+    │   │   │   ├── index.html
+    │   │   │   └── new.html
+    │   │   ├── layout/
+    │   │   │   └── base.html
+    │   │	└── __init__.py
+	│	└── __init__.py
     ├── test/
     ├── .gitignore                   
     ├── README.md                    
