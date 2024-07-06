@@ -22,9 +22,6 @@
     │   ├── routes/
     │   │   ├── __init__.py
     │   │   └── green_areas.py
-    │   ├── routes/
-    │   │   ├── __init__.py
-    │   │   └── green_areas.py
     │   ├── static/
     │   │   ├── __init__.py
     │   │   ├── muniISO.svg
